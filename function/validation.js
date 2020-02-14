@@ -34,11 +34,24 @@ $(document).ready(function () {
                             return false;
                         } else {
                             $("#message5").fadeOut();
-                            if (movil == "" || !TelValidateç.test(movil)) {
+                            if (movil == "" || !TelValidate.test(movil)) {
                                 $("#message6").fadeIn();
                                 return false;
                             } else {
                                 $("#message6").fadeOut();
+                                var datos = $("#signUpFrom").serialize();
+                                $.ajax({
+                                    type: "POST",
+                                    url: "signUp.php",
+                                    data: datos,
+                                    success: function (next) {
+                                        if (next == 1) {
+                                            alert("creado");
+                                        } else {
+                                            alert("error");
+                                        }
+                                    }
+                                })
                             }
 
                         }
@@ -46,8 +59,5 @@ $(document).ready(function () {
                 }
             }
         }
-
-
-
     })
 })
