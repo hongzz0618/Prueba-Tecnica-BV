@@ -17,7 +17,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-.container input[type="text"]{ 
+.container input[type="text"],input[type="email"]{ 
     width: 90%;
     padding: 5px;
     border:none;
@@ -40,10 +40,18 @@ body{
     margin-top: 30px;
   }
 ::-webkit-input-placeholder { color: black; }
+.error{
+    position: absolute;
+    z-index: 1;
+    color:red;
+    display: none;
+    margin-left: 20px;
+
+}
 @media screen and (max-width: 460px) {
     .col-50{
       width: 100%;
-      margin-top: 54px;
+      /* margin-top: 54px; */
     }
     input[type=submit] {
         width: 94%;
