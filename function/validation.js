@@ -44,14 +44,11 @@ $(document).ready(function () {
                                     type: "POST",
                                     url: "signUp.php",
                                     data: datos,
-                                    success: function (next) {
-                                        if (next == 1) {
-                                            alert("creado");
-                                        } else {
-                                            alert("error");
-                                        }
+                                    success: function (response) {
+                                        $("#responseCreate").html(response);
                                     }
                                 })
+                                return false;
                             }
 
                         }
