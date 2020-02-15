@@ -42,7 +42,7 @@ $(document).ready(function () {
                                 var datos = $("#signUpFrom").serialize();
                                 $.ajax({
                                     type: "POST",
-                                    url: "signUp.php",
+                                    url: "./model/signUp.php",
                                     data: datos,
                                     success: function (response) {
                                         $("#responseCreate").html(response);

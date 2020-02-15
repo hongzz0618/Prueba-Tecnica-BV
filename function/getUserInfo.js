@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#consultarUser").click(function () {
         $.ajax({
             type: "GET",
-            url: "getUsers.php",
+            url: "./model/getUsers.php",
             success: function (data) {
                 $("#dataSearch").html(data);
             }
