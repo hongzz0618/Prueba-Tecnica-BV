@@ -13,6 +13,7 @@ $resultEmail = mysqli_query($conexion, $selectEmail);
 $row_email = $resultEmail->num_rows;
 if ($row_email >= 1) {
     echo "el usuario ya existe";
+    exit();
 } else {
     mysqli_query($conexion, $insertsql);
     echo "usuario creado correctamente";
