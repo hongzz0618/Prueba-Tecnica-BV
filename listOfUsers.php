@@ -19,7 +19,6 @@
         <?php
         include("header.php");
         ?>
-        <button id="consultarUser" type="button" class="btn btn-outline-info">Consultar usuarios</button>
         <div id="dataSearch"></div>
     </div>
 </body>

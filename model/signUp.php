@@ -11,13 +11,19 @@ $insertsql = "INSERT INTO `$db_table1` (`nombre`,`apellido`,`email2`,`dni`,`movi
 
 $resultEmail = mysqli_query($conexion, $selectEmail);
 $row_email = $resultEmail->num_rows;
-if ($row_email >= 1) {
-    echo "el usuario ya existe";
-    exit();
+
+if ($nombre != "" && $apellido != "" && $email2 != "" && $DNI != "" && $movil != "") {
+    if ($row_email >= 1) {
+        echo "El usuario ya existe";
+        exit();
+    } else {
+        mysqli_query($conexion, $insertsql);
+        echo "Usuario creado correctamente";
+    }
 } else {
-    mysqli_query($conexion, $insertsql);
-    echo "usuario creado correctamente";
+    echo "Rellena todos los campos";
 }
+
 
 
 include("closedatabase.php");
