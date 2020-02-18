@@ -2,9 +2,15 @@
 include("database.php");
 
 $selectAll = "SELECT * from `$db_table1`";
+
+if (isset($_POST["valueSearch"])) {
+    $realValue = $conexion->real_escape_string($_POST["valueSearch"]);
+    $selectAll = "SELECT nombre, apellido, email2, dni, movil from `$db_table1` WHERE nombre LIKE '%" . $realValue . "%' OR apellido LIKE '%" . $realValue . "%' OR email2 LIKE '%" . $realValue . "%' OR dni LIKE '%" . $realValue . "%' OR movil LIKE '%" . $realValue . "%'";
+}
+
 $resultSelectAll = mysqli_query($conexion, $selectAll);
 
-if ($resultSelectAll) {
+if ($resultSelectAll->num_rows > 0) {
     $data = array();
     while ($result = mysqli_fetch_array($resultSelectAll)) {
         $data[] = array(
@@ -17,7 +23,7 @@ if ($resultSelectAll) {
     }
     echo json_encode($data);
 } else {
-    die("Error to do the select query" . mysqli_error($conexion));
+    echo "No rows";
 }
 
 include("closedatabase.php");

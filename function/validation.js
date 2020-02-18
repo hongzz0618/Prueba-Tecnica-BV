@@ -108,7 +108,7 @@ $(document).ready(function () {
                             let datos = $("#signUpFrom").serialize();
                             $.ajax({
                                 type: "POST",
-                                url: "./model/signUp.php",
+                                url: "model/signUp.php",
                                 data: datos,
                                 success: function (response) {
                                     init(response);

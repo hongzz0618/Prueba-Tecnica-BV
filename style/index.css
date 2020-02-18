@@ -55,9 +55,6 @@
 
 }
 
-#dataSearch{
-    margin-top: 20px;
-}
 
 html {
     box-sizing: border-box;
@@ -125,7 +122,16 @@ table{
     width: calc(95% - 50px);
     word-wrap: normal;
 }
-
+.box{
+    float: right;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#imgNodata{
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 @media screen and (max-width: 576px) {
     .col-50{
       width: 100%;
