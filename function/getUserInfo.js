@@ -1,4 +1,20 @@
 $(search_data());
+function removeUser(id) {
+    id = "id=" + id;
+    let opcion = confirm("¿Estas seguro de elimar este user?");
+    if (opcion == true) {
+        $.ajax({
+            type: "POST",
+            url: "model/deleteUsers.php",
+            data: id,
+            success: function (result) {
+                if (result == 1) {
+                    window.location = "http://localhost/pruebaBVirtual/listOfUsers.php";
+                }
+            }
+        })
+    }
+}
 function search_data(value) {
     $.ajax({
         type: "POST",
@@ -19,6 +35,7 @@ function search_data(value) {
                 items += "<th>Email</th>";
                 items += "<th>DNI</th>";
                 items += "<th>Móvil</th>";
+                items += "<th></th>";
                 items += "</tr>";
 
                 datas.forEach(element => {
@@ -28,6 +45,7 @@ function search_data(value) {
                     items += "<td>" + element["email"] + "</td>";
                     items += "<td>" + element["dni"] + "</td>";
                     items += "<td>" + element["movil"] + "</td>";
+                    items += "<td>" + "<i class='fa fa-trash' id='removeItem' onclick='(removeUser(" + element["id"] + "))'></i>" + "</td>";
                     items += "</tr>";
                 });
                 items += "</table>";

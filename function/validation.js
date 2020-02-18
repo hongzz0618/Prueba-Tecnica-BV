@@ -74,10 +74,8 @@ $(document).ready(function () {
             let indexReal = index + 1;
             if (item === "") {
                 $("#message" + indexReal).html("vuelva a introducir un formato correcto").fadeIn();
-                return false;
             } else if (item != "") {
                 $("#message" + indexReal).fadeOut();
-                return false;
             }
         });
         if (!EmailValidate.test(email1)) {

@@ -15,7 +15,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+#removeItem{
+    color: #e74c3c;
+    font-size: 18px;
+}
 .container > form >input[type="submit"]{ 
     margin-top: 30px;
     border:none;

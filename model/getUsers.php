@@ -14,6 +14,7 @@ if ($resultSelectAll->num_rows > 0) {
     $data = array();
     while ($result = mysqli_fetch_array($resultSelectAll)) {
         $data[] = array(
+            "id" => $result["id"],
             "nombre" => $result["nombre"],
             "apellido" => $result["apellido"],
             "email" => $result["email2"],
