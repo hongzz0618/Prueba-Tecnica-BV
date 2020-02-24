@@ -5,7 +5,7 @@ $selectAll = "SELECT * from `$db_table1`";
 
 if (isset($_POST["valueSearch"])) {
     $realValue = $conexion->real_escape_string($_POST["valueSearch"]);
-    $selectAll = "SELECT nombre, apellido, email2, dni, movil from `$db_table1` WHERE nombre LIKE '%" . $realValue . "%' OR apellido LIKE '%" . $realValue . "%' OR email2 LIKE '%" . $realValue . "%' OR dni LIKE '%" . $realValue . "%' OR movil LIKE '%" . $realValue . "%'";
+    $selectAll = "SELECT id,nombre, apellido, email2, dni, movil from `$db_table1` WHERE nombre LIKE '%" . $realValue . "%' OR apellido LIKE '%" . $realValue . "%' OR email2 LIKE '%" . $realValue . "%' OR dni LIKE '%" . $realValue . "%' OR movil LIKE '%" . $realValue . "%'";
 }
 
 $resultSelectAll = mysqli_query($conexion, $selectAll);
