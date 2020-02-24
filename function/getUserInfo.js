@@ -1,4 +1,5 @@
 $(search_data());
+
 function removeUser(id) {
     id = "id=" + id;
     let opcion = confirm("¿Estas seguro de elimar este user?");
