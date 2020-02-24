@@ -8,30 +8,26 @@
   background-color: white;
   max-width: 700px;
 }
-
 .headerComponent > a > img {
   margin: 10px;
   max-width: 100px;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 #removeItem {
   color: #e74c3c;
   font-size: 18px;
 }
-
 .container > form > input[type="submit"] {
   margin-top: 30px;
   border: none;
   color: white;
-  background-color: #04035c;
+  background-color: rgb(4, 3, 92);
   font-size: 18px;
   padding: 5px 120px;
   border-radius: 4px;
   cursor: pointer;
 }
-
 .headerComponent {
   width: 100%;
 }
@@ -64,25 +60,19 @@
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
-
 body {
   margin: auto;
   background-color: rgba(192, 192, 192, 0.486);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 table {
@@ -90,87 +80,63 @@ table {
 }
 
 .notification {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   opacity: 0;
   padding-right: 15px;
   position: absolute;
   right: 30px;
   top: 150px;
   visibility: hidden;
-  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   width: 270px;
 }
-
 .notification.visible {
   opacity: 0.8;
   top: 20px;
   visibility: visible;
 }
-
 .notification.info {
   background-color: #419636;
 }
-
 .notification.error {
   background-color: #e74c3c;
 }
 
 .notification > .icon {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 50px;
 }
-
 .notification > .icon > i {
   color: white;
   cursor: default;
 }
-
 .notification > .notificationText {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: white;
   cursor: default;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-weight: 400;
   font-size: 15px;
   width: calc(95% - 50px);
   word-wrap: normal;
 }
-
 .box {
   float: right;
   font-size: 14px;
   margin-top: 10px;
 }
-
 #imgNodata {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 @media screen and (max-width: 576px) {
   .col-50 {
     width: 100%;
@@ -193,4 +159,3 @@ table {
     /* width: 100%; */
   }
 }
-/*# sourceMappingURL=index.css.map */
