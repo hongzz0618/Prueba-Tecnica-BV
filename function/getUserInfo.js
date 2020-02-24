@@ -28,7 +28,6 @@ function search_data(value) {
             } else {
                 datas = JSON.parse(datas);
 
-                items += "<div class='table-responsive-sm'>";
                 items += "<table class='table'>";
                 items += "<tr>";
                 items += "<th>Nombre</th>";
@@ -50,7 +49,6 @@ function search_data(value) {
                     items += "</tr>";
                 });
                 items += "</table>";
-                items += "</div>";
             }
             $("#dataSearch").html(items);
         }
