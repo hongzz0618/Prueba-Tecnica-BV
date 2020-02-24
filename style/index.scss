@@ -77,11 +77,10 @@ body {
 }
 
 .table {
-  margin-top: 40px;
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 13px;
+  font-size: 14px;
 
   th {
     background: #333;
@@ -134,6 +133,9 @@ body {
   color: white;
   cursor: default;
 }
+i:hover {
+  cursor: pointer;
+}
 .notification > .notificationText {
   align-items: center;
   color: white;
@@ -166,6 +168,11 @@ body {
     .table {
       display: block;
       overflow-x: auto;
+      font-size: 15px;
+      th,
+      td {
+        padding: 10px;
+      }
     }
     .col-50 {
       width: 100%;

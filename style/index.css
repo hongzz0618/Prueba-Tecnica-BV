@@ -86,11 +86,10 @@ body {
 }
 
 .table {
-  margin-top: 40px;
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .table th {
@@ -161,6 +160,10 @@ body {
   cursor: default;
 }
 
+i:hover {
+  cursor: pointer;
+}
+
 .notification > .notificationText {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -203,6 +206,13 @@ body {
   body .table {
     display: block;
     overflow-x: auto;
+    font-size: 15px;
+  }
+  html .table th,
+  html .table td,
+  body .table th,
+  body .table td {
+    padding: 10px;
   }
   html .col-50,
   body .col-50 {
