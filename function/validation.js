@@ -62,12 +62,12 @@ function init(response) {
 
 $(document).ready(function () {
     $("#SubmitButton").click(function () {
-        let nombre = $("#idNombre").val();
-        let apellido = $("#idApellido").val();
-        let email1 = $("#idEmail1").val();
-        let email2 = $("#idEmail2").val();
-        let DNI = $("#idDNI").val();
-        let movil = $("#idMovil").val();
+        const nombre = $("#idNombre").val();
+        const apellido = $("#idApellido").val();
+        const email1 = $("#idEmail1").val();
+        const email2 = $("#idEmail2").val();
+        const DNI = $("#idDNI").val();
+        const movil = $("#idMovil").val();
 
         let FormInfo = [nombre, apellido, email1, email2, DNI, movil];
         FormInfo.map(function (item, index) {
@@ -109,6 +109,12 @@ $(document).ready(function () {
                                 url: "model/signUp.php",
                                 data: datos,
                                 success: function (response) {
+                                    $("#idNombre").val("");
+                                    $("#idApellido").val("");
+                                    $("#idEmail1").val("");
+                                    $("#idEmail2").val("");
+                                    $("#idDNI").val("");
+                                    $("#idMovil").val("");
                                     init(response);
                                 }
                             })
